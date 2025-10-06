@@ -43,6 +43,7 @@
             width: 100%;
             height: 100%;
             display: block;
+            pointer-events: none;
         }
         .stars {
             background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><circle cx="15%" cy="20%" r="1" fill="white" opacity="0.5"/><circle cx="30%" cy="40%" r="0.5" fill="white" opacity="0.5"/><circle cx="50%" cy="10%" r="1" fill="white" opacity="0.5"/><circle cx="70%" cy="30%" r="1" fill="white" opacity="0.5"/><circle cx="85%" cy="50%" r="0.5" fill="white" opacity="0.5"/><circle cx="40%" cy="60%" r="1" fill="white" opacity="0.5"/><circle cx="20%" cy="80%" r="0.5" fill="white" opacity="0.5"/><circle cx="60%" cy="90%" r="1" fill="white" opacity="0.5"/><circle cx="80%" cy="70%" r="0.5" fill="white" opacity="0.5"/><circle cx="95%" cy="85%" r="1" fill="white" opacity="0.5"/></svg>') repeat;
@@ -66,7 +67,7 @@
     <!-- 主卡片 -->
     <main class="relative z-10 w-full max-w-xl md:max-w-2xl bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl text-white text-center p-8 md:p-12 border border-white/20">
         <!-- 卡片內的月亮光暈效果 -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-80 md:h-80 bg-yellow-200/30 rounded-full blur-3xl opacity-80"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-80 md:h-80 bg-yellow-200/30 rounded-full blur-3xl opacity-80 pointer-events-none"></div>
 
         <div class="relative z-20">
             <h1 class="text-4xl md:text-5xl font-bold text-yellow-300 tracking-wider text-shadow" style="text-shadow: 0 0 10px #fde047;">
@@ -92,12 +93,26 @@
                 <p class="text-sm text-slate-400 mt-1 text-shadow">The Best Things We Do</p>
             </div>
 
+            <!-- 新增的寵兒共和國卡片 -->
+            <div class="my-8 p-6 bg-white/10 rounded-xl flex flex-col md:flex-row items-center gap-6 text-left">
+                <img src="https://i.urusai.cc/8F1ye.jpeg" alt="寵兒共和國" class="w-24 h-24 rounded-full object-cover border-2 border-white/30 flex-shrink-0">
+                <div>
+                    <h4 class="text-xl font-bold text-yellow-300 text-shadow">寵兒共和國</h4>
+                    <a href="https://www.wedo.pet" target="_blank" rel="noopener noreferrer" class="text-lg text-slate-100 hover:underline text-shadow">
+                        WEDO for Pets
+                    </a>
+                </div>
+            </div>
+
             <hr class="border-white/20 my-8 max-w-xs mx-auto">
 
+            <!-- 地址與網址區塊 -->
             <div class="text-sm text-slate-300 space-y-2 text-shadow">
-                <p>10597 台北市松山區南京東路五段154號7樓之1</p>
-                <p>7F.-1, No.154, Sec. 5, Nanjing E. Rd., Songshan Dist., Taipei City 10597, Taiwan</p>
-                <a href="http://www.wedopr.com" target="_blank" class="hover:text-yellow-300 transition-colors text-lg font-bold">www.wedopr.com</a>
+                <a href="https://maps.app.goo.gl/4R44EgLwaSbF9V8s5" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity block">
+                    <p>10597 台北市松山區南京東路五段154號7樓之1</p>
+                    <p>7F.-1, No.154, Sec. 5, Nanjing E. Rd., Songshan Dist., Taipei City 10597, Taiwan</p>
+                </a>
+                <a href="https://www.wedopr.com" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition-colors text-lg font-bold inline-block pt-4">www.wedopr.com</a>
             </div>
         </div>
     </main>
